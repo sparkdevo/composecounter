@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "nick8s-7dc3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "nick8s-7dc3"
+  template:
+    metadata:
+      labels:
+        app: "nick8s-7dc3"
+    spec:
+      containers:
+        - name: "nick8s-7dc3"
+          image: "xxxxxy.azurecr.io/nick8s"
+          ports:
+          - containerPort: 80
